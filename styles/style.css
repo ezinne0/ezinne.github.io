@@ -1,0 +1,333 @@
+/* Author: Ezinne Okonkwo
+Last Updated: 8/7/23
+Hello source peeker! Hope you enjoy:D */
+
+html {
+  font-size: 10px;
+}
+
+/* dark mode light mode styling (it doesn't work, but I will come back to it own my own time)*/
+/* here is just variable assignment for when I revisit light mode */
+:root{
+  /* create variables so I can just reassign them when switching to light mode */
+  --body-color: rgb(25, 25, 25);
+  --text-color: #ffffff;
+  --background-color: #214136;
+  --accent-color: #43644950;
+  --specialText-color: #b1b695;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.navBarContainer {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;  
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* HEADER TAGS */
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: #436449;
+  text-shadow: 2px 3px 1px #b1b695;
+}
+
+h2{
+  font-size: 30px;
+  color:#ffffff;
+}
+
+h3{
+  font-size: large;
+  color:#ffffff;
+}
+
+h4{
+  font-size: large;
+  color:#ffffff;
+  font-family: 'DM Serif Display', serif;
+}
+
+p, li {
+
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+  /* color: #ffffff; */
+}
+
+/* customizes the bar as a unit */
+.navHeader{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align:right;
+}
+
+.favList{
+  text-align: center;
+}
+
+.favListItems{
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+}
+
+/* makes the nav bar links display in horizontal line */
+.navTabList{
+  display: inline;
+}
+
+/* nav bar user experience functionality */
+.navigationTabs{
+  font-family: 'Work Sans', sans-serif;
+  font-weight:400;
+  background-image: linear-gradient(
+    to right,
+    #b1b695,
+    #b1b695 50%,
+    #ffffff 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 30px;
+  position: relative;
+  /* fade in animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* gradient speed */
+  transition: all 0.7s ease-in-out;
+}
+
+/* changes color when you hover over navigation bar links */
+.navigationTabs:hover{
+  background-position: 0;
+}
+
+/* apply to all links (so user knows to click) */
+a{
+  text-decoration: none;
+  color:#b1b695;
+  font-weight: 600;
+}
+
+/* logo in top left */
+#EO{
+  color: #436449;
+}
+
+/* small bit of text introducing each page */
+.greeting{
+  text-align: center;
+  font-size:35px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 500;
+  color: white;
+  min-height: 50px;
+}
+
+/* my name that is in the header */
+#myName{
+  font-size: 80px;
+  width:auto;
+}
+
+/* shows pronnunciation of my name when hovered over */
+#myName:hover span{
+  display: none;
+}
+#myName:hover:before {
+  content: "\"Eh-zih-nay Oh-kon-kwoh\"";
+  font-size: 50px;
+  text-shadow: 1px 2px 0.5px #b1b695;
+}
+
+/* anything with this class shall have the following characteristics */
+.background-color{
+  background-color: #214136;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* anything with this class shall have the following characteristics */
+.accent-color{
+  background-color: #43644950;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* anything with this class shall have the following characteristics */
+.text-color{
+  background-color: #b1b695;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer section */
+.footerIcons{
+  height: 30px;
+  width: 30px;
+  padding: 30px;
+}
+
+/* "connect with me" */
+#footer_words{
+  text-align: center;
+}
+
+/* projects and awards div formatting */
+.projawards {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* passions on passions.html */
+.passions{
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  
+}
+/* all small titles */
+.subtitles{
+  font-family: 'DM Serif Display', serif;
+  text-align: center;
+}
+
+/* introduction on index.html */
+.intro{
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+}
+
+/* "who am I" section on index.html */
+.whoAmIcontainer{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* all projects have this class */
+.projContainer{
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  flex:1;
+  text-align: left;
+}
+
+/* on passions.html */
+.crochetContainer{
+  margin: 0 auto;
+  padding: 20px;
+  flex:1;
+  text-align: left;
+}
+
+/* project titles in project div in index.html */
+.projTitle{
+  font-size: 20px;
+}
+
+/* box of favorites on passion.html */
+#favs{
+  max-width: 300px;
+  background-color: #b1b69543;
+  text-align: center;
+}
+
+/* read more button functionality */
+.readMore{
+  font-size: 22px;
+  border-bottom: 1px solid currentColor;
+  background-image: linear-gradient(
+    to right,
+    #b1b695,
+    #b1b695 50%,
+    #ffffff 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  display: inline-block;
+  padding: 5x;
+  position: relative;
+  /* fancy fade in animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* gradient speed */
+  transition: all 0.7s ease-in-out;
+}
+
+/* changes color when you hover over read more links on index.html */
+.readMore:hover{
+  /* background-color: cornflowerblue; */
+  background-position: 0;
+}
+
+/* container for app images */
+.beDazzledContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* pictures of BeDazzled app on crochet.html */
+.beDazzledPics{
+  max-width: 350px;
+  padding:40px;
+}
+
+/* CWID video */
+.video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+/* div for individual awards listed out */
+.awardList{
+  text-align: center;
+}
+
+.crochetimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+.crochetgallery{
+  margin-left: 15px;
+  margin-right: 15px;
+}
