@@ -10,8 +10,8 @@ html {
 /* here is just variable assignment for when I revisit light mode */
 :root{
   /* create variables so I can just reassign them when switching to light mode */
-  --body-color: rgb(25, 25, 25);
-  --text-color: #ffffff;
+  --body-color: #EEEDE7;
+  --text-color: #214136;
   --background-color: #214136;
   --accent-color: #43644950;
   --specialText-color: #b1b695;
@@ -35,12 +35,11 @@ body {
 /* HEADER TAGS */
 h1 {
   font-family: 'DM Serif Display', serif;
-  font-size: 60px;
-  text-align: center;
+  font-size: 30px;
+  text-align:left;
   margin: 0;
-  padding: 20px 0;
+  padding-left: 20px;
   color: #436449;
-  text-shadow: 2px 3px 1px #b1b695;
 }
 
 h2{
@@ -89,12 +88,11 @@ p, li {
 }
 
 /* makes the nav bar links display in horizontal line */
-.navTabList{
-  display: inline;
-}
+
 
 /* nav bar user experience functionality */
 .navigationTabs{
+  display: inline;
   font-family: 'Work Sans', sans-serif;
   font-weight:400;
   background-image: linear-gradient(
