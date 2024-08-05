@@ -7,18 +7,7 @@ class MyHeader extends HTMLElement{
   connectedCallback(){
     this.innerHTML= `
       <header>
-      <div class="navBarContainer">
-      <h1 ><a id= "EO" href= "index.html">EO</a></h1>
-        <nav>
-          <ul class="navHeader">
-            <li class="navTabList"><a class= "navigationTabs" href= "index.html">Home</a></li>
-            <li class="navTabList"><a class= "navigationTabs" href="index.html#whoAmI?">Who Am I?</li></a>
-            <li class="navTabList"><a class= "navigationTabs" href= "passions.html">Passions</a></li>
-            <li class="navTabList"><a class= "navigationTabs" href= "https://www.linkedin.com/in/ezinne-okonkwo/">LinkedIn</a></li>
-          </ul>
-          </nav>
-      </div>
-      <h1 id="myName"><span>Ezinne Okonkwo</span></h1>
+      <h1 class="title">ezinne</h1>
       </header>
       `
   }

@@ -23,6 +23,14 @@ body {
   color: var(--text-color);
 }
 
+.mainImg{
+  max-width: 40%;
+  display: block;  /* center img */
+  margin-left: auto;
+  margin-right: auto;
+  padding:25px;
+}
+
 .navBarContainer {
   display:flex;
   justify-content:space-between;
@@ -33,12 +41,13 @@ body {
 }
 
 /* HEADER TAGS */
-h1 {
+
+.title{
   font-family: 'DM Serif Display', serif;
   font-size: 30px;
   text-align:left;
   margin: 0;
-  padding-left: 20px;
+  padding-left: 20px; padding-top: 10px;
   color: #436449;
 }
 
@@ -118,18 +127,6 @@ p, li {
   background-position: 0;
 }
 
-/* apply to all links (so user knows to click) */
-a{
-  text-decoration: none;
-  color:#b1b695;
-  font-weight: 600;
-}
-
-/* logo in top left */
-#EO{
-  color: #436449;
-}
-
 /* small bit of text introducing each page */
 .greeting{
   text-align: center;
@@ -140,39 +137,7 @@ a{
   min-height: 50px;
 }
 
-/* my name that is in the header */
-#myName{
-  font-size: 80px;
-  width:auto;
-}
 
-/* shows pronnunciation of my name when hovered over */
-#myName:hover span{
-  display: none;
-}
-#myName:hover:before {
-  content: "\"Eh-zih-nay Oh-kon-kwoh\"";
-  font-size: 50px;
-  text-shadow: 1px 2px 0.5px #b1b695;
-}
-
-/* anything with this class shall have the following characteristics */
-.background-color{
-  background-color: #214136;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-/* anything with this class shall have the following characteristics */
-.accent-color{
-  background-color: #43644950;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
 
 /* anything with this class shall have the following characteristics */
 .text-color{
@@ -183,18 +148,6 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-/* footer section */
-.footerIcons{
-  height: 30px;
-  width: 30px;
-  padding: 30px;
-}
-
-/* "connect with me" */
-#footer_words{
-  text-align: center;
 }
 
 /* projects and awards div formatting */
@@ -216,33 +169,6 @@ a{
   box-sizing: border-box;
   
 }
-/* all small titles */
-.subtitles{
-  font-family: 'DM Serif Display', serif;
-  text-align: center;
-}
-
-/* introduction on index.html */
-.intro{
-  margin-left: 40px;
-  margin-right: 40px;
-  text-align: center;
-}
-
-/* "who am I" section on index.html */
-.whoAmIcontainer{
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-/* all projects have this class */
-.projContainer{
-  max-width: 50%;
-  margin: 0 auto;
-  padding: 20px;
-  flex:1;
-  text-align: left;
-}
 
 /* on passions.html */
 .crochetContainer{
@@ -252,17 +178,6 @@ a{
   text-align: left;
 }
 
-/* project titles in project div in index.html */
-.projTitle{
-  font-size: 20px;
-}
-
-/* box of favorites on passion.html */
-#favs{
-  max-width: 300px;
-  background-color: #b1b69543;
-  text-align: center;
-}
 
 /* read more button functionality */
 .readMore{
