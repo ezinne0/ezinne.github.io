@@ -6,30 +6,45 @@
 class MyHeader extends HTMLElement{
   connectedCallback(){
     this.innerHTML= `
-      <header>
-      <h1 class="title">ezinne</h1>
-      </header>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <button class="menu-toggle" id="menu-toggle">
+      ☰
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">about</a></li>
+      <li><a href="#about">hair-itage</a></li>
+      <li><a href="#services">more</a></li>
+    </ul>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
+
       `
   }
 }
 // custom element: if I want to change it, only have to do so in one file
 customElements.define('my-header', MyHeader)
 
-//footer
-class MyFooter extends HTMLElement{
-  connectedCallback(){
-    // putting footer details here to apply to all other pages
-    this.innerHTML= `
-    <div class="text-color" class="footerContainer">
-      <footer>
-      <p id="footer_words">connect with me</p>
-        <a href= "mailto:zidede1@gmail.com" target="_blank"> <img class="footerIcons" src = "images/email_dark_icon.png"> </a>
-        <a href= "https://www.linkedin.com/in/ezinne-okonkwo/" target="_blank"> <img class="footerIcons" src = "images/linkedin_dark_icon.png"> </a>
-      </footer>
-    </div> `
-  }
-}
-customElements.define('my-footer', MyFooter)
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+});
+
 
 // typing effect of home page
 $(document).ready(function(){

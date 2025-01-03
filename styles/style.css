@@ -1,10 +1,89 @@
 /* Author: Ezinne Okonkwo
-Last Updated: 8/7/23
-Hello source peeker! Hope you enjoy:D */
+Last Updated: 1/2/25
+Hello source peeker! */
 
 html {
   font-size: 10px;
 }
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px 20px; */
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(210, 39, 39);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+.heading {
+  display: flex;
+  align-items: center; /* Vertically align the elements */
+  gap: 10px; /* Adds spacing between elements */
+  justify-content: space-between; /* Push items to opposite ends */
+  padding: 20px 40px;
+}
+.intro{
+  font-size: 2em;
+  padding: 10px 400px;
+  text-align: center;
+}
+
 
 /* dark mode light mode styling (it doesn't work, but I will come back to it own my own time)*/
 /* here is just variable assignment for when I revisit light mode */
@@ -24,20 +103,11 @@ body {
 }
 
 .mainImg{
-  max-width: 40%;
+  max-width: 32%;
   display: block;  /* center img */
   margin-left: auto;
   margin-right: auto;
-  padding:25px;
-}
-
-.navBarContainer {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;  
-  margin-top: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-top:25px;
 }
 
 /* HEADER TAGS */
@@ -74,47 +144,13 @@ p, li {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 1px;
-  /* color: #ffffff; */
 }
-
-/* customizes the bar as a unit */
-.navHeader{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  text-align:right;
-}
-
-.favList{
-  text-align: center;
-}
-
-.favListItems{
-  text-decoration: none;
-  list-style-type: none;
-  text-align: center;
-}
-
-/* makes the nav bar links display in horizontal line */
-
 
 /* nav bar user experience functionality */
 .navigationTabs{
   display: inline;
   font-family: 'Work Sans', sans-serif;
   font-weight:400;
-  background-image: linear-gradient(
-    to right,
-    #b1b695,
-    #b1b695 50%,
-    #ffffff 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  padding: 30px;
-  position: relative;
   /* fade in animation */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -126,58 +162,6 @@ p, li {
 .navigationTabs:hover{
   background-position: 0;
 }
-
-/* small bit of text introducing each page */
-.greeting{
-  text-align: center;
-  font-size:35px;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: 500;
-  color: white;
-  min-height: 50px;
-}
-
-
-
-/* anything with this class shall have the following characteristics */
-.text-color{
-  background-color: #b1b695;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* projects and awards div formatting */
-.projawards {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-/* passions on passions.html */
-.passions{
-  width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
-  box-sizing: border-box;
-  
-}
-
-/* on passions.html */
-.crochetContainer{
-  margin: 0 auto;
-  padding: 20px;
-  flex:1;
-  text-align: left;
-}
-
 
 /* read more button functionality */
 .readMore{
@@ -205,42 +189,4 @@ p, li {
 .readMore:hover{
   /* background-color: cornflowerblue; */
   background-position: 0;
-}
-
-/* container for app images */
-.beDazzledContainer{
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-/* pictures of BeDazzled app on crochet.html */
-.beDazzledPics{
-  max-width: 350px;
-  padding:40px;
-}
-
-/* CWID video */
-.video{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20px;
-}
-
-/* div for individual awards listed out */
-.awardList{
-  text-align: center;
-}
-
-.crochetimg{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-}
-
-.crochetgallery{
-  margin-left: 15px;
-  margin-right: 15px;
 }
