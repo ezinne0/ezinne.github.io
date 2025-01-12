@@ -1,11 +1,12 @@
 // Author: Ezinne Okonkwo
-// Last Updated: 1/9/25
+// Last Updated: 1/12/25
 // Hello source peeker! Hope you enjoy:D
 
 // Define the custom header element
 class MyHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+     <div class = "heading" >
       <nav class="navbar">
         <button class="menu-toggle" id="menu-toggle">
           ☰
@@ -16,6 +17,8 @@ class MyHeader extends HTMLElement {
           <li><a href="more.html">more</a></li>
         </ul>
       </nav>
+      <h1 class="name">ezinne okonkwo</h1>
+      </div>
     `;
   }
 }

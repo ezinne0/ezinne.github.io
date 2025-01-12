@@ -1,5 +1,5 @@
 /* Author: Ezinne Okonkwo
-Last Updated: 1/9/25
+Last Updated: 1/12/25
 Hello source peeker! */
 
 html {
@@ -11,6 +11,7 @@ body {
   margin: 0;
 }
 
+/* styling for everything up top */
 .heading {
   display: flex;
   align-items: center; /* Vertically align the elements */
@@ -18,13 +19,35 @@ body {
   justify-content: space-between; /* Push items to opposite ends */
   padding: 0px 40px;
 }
+
 .intro{
   font-size: 2em;
-  padding: 10px 345px;
+  padding: 10px 300px;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-weight: 580;
+}
+
+.aboutTextp{
+  font-size: 2em;
+  padding: 10px 55px;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-weight: 530;
+  line-height: 1.6;
+}
+.myName{
+  font-size: 1.8em;
   text-align: center;
   font-family: "Crimson Text", serif;
   font-weight: 400;
-  font-size: 2em;
+}
+
+.link{
+  text-decoration: underline #00bcd4; /* Underline on hover */
+  text-decoration-style: wavy; /* Make it wavy on hover */
+  text-decoration-thickness: 2px; /* Adjust thickness */
+  color: #214136;
 }
 
 .name{
@@ -35,17 +58,22 @@ body {
   color: #D44967;
 }
 
-/* Navbar styles */
+.phonetics {
+  display: inline;
+  font-family: "Crimson Text", serif;
+  font-size: 1.1em;
+}
+
+.italics {
+  font-style:italic;
+}
+
+
+/* Navbar  */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 10px 20px; */
-}
-
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
 }
 
 .nav-links {
@@ -83,8 +111,6 @@ body {
   text-decoration-color: #00bcd4;
   text-decoration-thickness: 2px;
 }
-
-
 
 /* Hamburger menu styles */
 .menu-toggle {
@@ -133,34 +159,6 @@ body {
   display: block;  /* center img */
   margin-left: auto;
   margin-right: auto;
-  padding-top:25px;
-}
-
-/* HEADER TAGS */
-
-.title{
-  font-family: 'DM Serif Display', serif;
-  font-size: 27px;
-  text-align:left;
-  margin: 0;
-  padding-left: 20px; padding-top: 10px;
-  color: #472C1B;
-}
-
-h2{
-  font-size: 30px;
-  color:#ffffff;
-}
-
-h3{
-  font-size: large;
-  color:#ffffff;
-}
-
-h4{
-  font-size: large;
-  color:#ffffff;
-  font-family: 'DM Serif Display', serif;
 }
 
 p, li {
@@ -170,49 +168,4 @@ p, li {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 1px;
-}
-
-/* nav bar user experience functionality */
-.navigationTabs{
-  display: inline;
-  font-family: 'Work Sans', sans-serif;
-  font-weight:400;
-  /* fade in animation */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* gradient speed */
-  transition: all 0.7s ease-in-out;
-}
-
-/* changes color when you hover over navigation bar links */
-.navigationTabs:hover{
-  background-position: 0;
-}
-
-/* read more button functionality */
-.readMore{
-  font-size: 22px;
-  border-bottom: 1px solid currentColor;
-  background-image: linear-gradient(
-    to right,
-    #b1b695,
-    #b1b695 50%,
-    #ffffff 50%
-  );
-  background-size: 200% 100%;
-  background-position: 100%;
-  display: inline-block;
-  padding: 5x;
-  position: relative;
-  /* fancy fade in animation */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* gradient speed */
-  transition: all 0.7s ease-in-out;
-}
-
-/* changes color when you hover over read more links on index.html */
-.readMore:hover{
-  /* background-color: cornflowerblue; */
-  background-position: 0;
 }
