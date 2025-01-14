@@ -14,15 +14,15 @@ body {
 /* styling for everything up top */
 .heading {
   display: flex;
-  align-items: center; /* Vertically align the elements */
-  gap: 10px; /* Adds spacing between elements */
-  justify-content: space-between; /* Push items to opposite ends */
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
   padding: 0px 40px;
 }
 
 .intro {
   font-size: 2em;
-  padding: 10px 25%; /* Use percentages for horizontal padding */
+  padding: 10px 25%;
   text-align: center;
   font-family: "Crimson Text", serif;
   font-weight: 580;
@@ -30,28 +30,35 @@ body {
 
 .aboutTextp {
   font-size: 2em;
-  padding: 10px 10%; /* Use percentages for horizontal padding */
+  padding: 10px 10%;
   text-align: center;
   font-family: "Crimson Text", serif;
   font-weight: 530;
   line-height: 1.6;
 }
 
-.myName{
+.myName {
   font-size: 1.8em;
   text-align: center;
   font-family: "Crimson Text", serif;
   font-weight: 400;
 }
 
-.link{
-  text-decoration: underline #00bcd4; /* Underline on hover */
-  text-decoration-style: wavy; /* Make it wavy on hover */
-  text-decoration-thickness: 2px; /* Adjust thickness */
+.subtitles{
+  font-size:3.5em;
+  font-family: "Jersey 15", serif;
+  color: #D44967;
+  text-align: center;
+}
+
+.link {
+  text-decoration: underline #00bcd4;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
   color: #214136;
 }
 
-.name{
+.name {
   font-family: "Jersey 15", serif;
   font-weight: 400;
   font-style: normal;
@@ -66,9 +73,8 @@ body {
 }
 
 .italics {
-  font-style:italic;
+  font-style: italic;
 }
-
 
 /* Navbar  */
 .navbar {
@@ -93,68 +99,29 @@ body {
   text-decoration: none;
   font-family: "Crimson Text", serif;
   font-weight: 400;
-  font-size:1.3em;
+  font-size: 1.3em;
   font-weight: 700;
   color: #D44967;
-
 }
 
 /* Hover effect */
 .nav-links a:hover {
-  text-decoration: underline #00bcd4; /* Underline on hover */
-  text-decoration-style: wavy; /* Make it wavy on hover */
-  text-decoration-thickness: 2px; /* Adjust thickness */
+  text-decoration: underline #00bcd4;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
 }
 
 /* Active link styling */
 .nav-links a.active {
-  text-decoration: underline; /* Underline active link */
+  text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: #00bcd4;
   text-decoration-thickness: 2px;
 }
-
-/* dark mode light mode styling (it doesn't work, but I will come back to it own my own time)*/
-/* here is just variable assignment for when I revisit light mode */
-:root{
-  /* create variables so I can just reassign them when switching to light mode */
-  --body-color: #EEEDE7;
-  --text-color: #214136;
-  --background-color: #214136;
-  --accent-color: #43644950;
-  --specialText-color: #b1b695;
+.nav-links.active {
+  display: flex;
+  top: 100%; /* Ensures the menu appears right below the header */
 }
-
-body {
-  margin: 0 auto;
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-.mainImgIndex{
-  max-width: 32%;
-  display: block;  /* center img */
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 40px;
-}
-.mainImg{
-  max-width: 32%;
-  display: block;  /* center img */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-p, li {
-
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
-/* Hamburger nav bar styling */
 
 /* Hamburger menu styles */
 .menu-toggle {
@@ -164,12 +131,17 @@ p, li {
   color: #D44967;
   font-size: 2.5em;
   cursor: pointer;
+  margin-right: 10px; /* Adjusts spacing from the right edge */
+  padding: 20px; /* Adds inner spacing */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+  }
+  .heading {
+    position: relative;
   }
 
   .nav-links {
@@ -181,6 +153,7 @@ p, li {
     width: 100%;
     background-color: #EEEDE7;
     padding: 20px 0;
+    /* z-index: 1000; */
   }
 
   .nav-links.active {
@@ -199,9 +172,99 @@ p, li {
   .navbar {
     width: 100%;
     justify-content: space-between;
+    padding: 0 20px;
+    
   }
 
   .name {
     margin-top: 10px;
   }
+}
+
+/* dark mode light mode styling (it doesn't work, but I will come back to it own my own time)*/
+/* here is just variable assignment for when I revisit light mode */
+:root {
+  --body-color: #EEEDE7;
+  --text-color: #214136;
+  --background-color: #214136;
+  --accent-color: #43644950;
+  --specialText-color: #b1b695;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.mainImgIndex {
+  max-width: 32%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+}
+
+.mainImg {
+  max-width: 32%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p, li {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+/* image gallery on more.html */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
 }

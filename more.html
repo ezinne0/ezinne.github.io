@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>ezinne okonkwo</title>
+    <title>ezinne okonkwo—more</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,67 @@
       <my-header></my-header>
     
      
-    <div><img class="mainImg" src="images/ezinne.jpg"></div>
 
     <div class = "aboutText"></div>
+
+    <p class="subtitles">design</p>
+    
+      <div class="gallery">
+        <div class="gallery-item">
+          <a href="javascript:void(0)" onclick="openModal('images/asap_rocky.png')">
+            <img src="images/asap_rocky.png" alt="Placeholder Image 1">
+          </a>
+
+        </div>  
+
+        <div class="gallery-item">
+          <a href="javascript:void(0)" onclick="openModal('images/crochet_ind_title.png')">
+            <img src="images/crochet_ind_title.png" alt="Placeholder Image 1">
+          </a>
+        </div>  
+
+        <div class="gallery-item">
+          <a href="javascript:void(0)" onclick="openModal('images/senior_ex_title.png')">
+            <img src="images/senior_ex_title.png" alt="Placeholder Image 1">
+          </a>
+        </div>  
+
+        <div class="gallery-item">
+          <a href="javascript:void(0)" onclick="openModal('images/senior_ex_ad.png')">
+            <img src="images/senior_ex_ad.png" alt="Placeholder Image 1">
+          </a>
+        </div>
+
+        <div class="gallery-item">
+          <a href="javascript:void(0)" onclick="openModal('images/senior_ex_teaser.png')">
+            <img src="images/senior_ex_teaser.png" alt="Placeholder Image 1">
+          </a>
+        </div>
+
+        <div class="gallery-item">
+          <a href="javascript:void(0)" onclick="openModal('images/ahhs1.png')">
+            <img src="images/ahhs1.png" alt="Placeholder Image 1">
+          </a>
+        </div>
+
+        <div class="gallery-item">
+          <a href="javascript:void(0)" onclick="openModal('images/ahhs2.png')">
+            <img src="images/ahhs2.png" alt="Placeholder Image 1">
+          </a>
+        </div>
+
+      </div>
+    
+
+    <p class="subtitles">projects</p>
+    <p class="subtitles">awards</p>
     
     <script src="scripts/main.js"></script>
 
+
+     <!-- Modal for Image Enlargement -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Enlarged Image">
+  </div>
   </body>
 </html>
