@@ -6,24 +6,27 @@
 class MyHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-     <div class = "heading" >
-      <nav class="navbar">
-        <button class="menu-toggle" id="menu-toggle">
-          ☰
-        </button>
-        <ul class="nav-links">
-          <li><a href="about.html">about</a></li>
-          <li><a a href="https://hair-itage.org/">hair-itage</a></li>
-          <li><a href="more.html">more</a></li>
-        </ul>
-      </nav>
-      <h1 class="name">ezinne okonkwo</h1>
+      <div class="heading">
+        <nav class="navbar">
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+            ☰
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="about.html">about</a></li>
+            <li><a href="https://hair-itage.org/">hair-itage</a></li>
+            <li><a href="more.html">more</a></li>
+          </ul>
+        </nav>
+        <h1 class="name">ezinne okonkwo</h1>
       </div>
     `;
   }
 }
 
+
 customElements.define("my-header", MyHeader);
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -56,6 +59,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+// Hamburger nav bar for smaller displays
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  navLinks.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      navLinks.classList.remove('active');
+    }
+  });
+
+  // ... (keep your existing code here)
+});
 
 
 // Typing effect on the home page
