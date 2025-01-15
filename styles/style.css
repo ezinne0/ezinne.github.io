@@ -45,10 +45,11 @@ body {
 }
 
 .subtitles{
-  font-size:3.5em;
+  font-size: 4em;
   font-family: "Jersey 15", serif;
   color: #D44967;
   text-align: center;
+  margin:0px;
 }
 
 .link {
@@ -267,4 +268,33 @@ p, li {
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
+}
+
+.awards-container {
+  text-align: center;
+  padding-left: 10%; padding-right: 10%;
+}
+
+.small-title {
+  color: #D44967;
+  font-size: 2.3em;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-weight: 580;
+  margin: 8px 0 4px; /* Reduced spacing */
+}
+
+.award-info {
+  font-size: 1.5em;
+  color: #214136;
+  font-weight: 550;
+  /* margin: 0 0 30px; Reduced bottom margin */
+}
+
+.award-description{
+  font-size: 2.2em;
+  color: #214136;
+  font-family: "Crimson Text", serif;
+  font-weight: 100;
+  margin: 0 0 30px;
 }
