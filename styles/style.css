@@ -192,7 +192,7 @@ body {
 /* dark mode light mode styling (it doesn't work, but I will come back to it own my own time)*/
 /* here is just variable assignment for when I revisit light mode */
 :root {
-  --body-color: #EEEDE7;
+  --body-color: #F9F5F0;
   --text-color: #214136;
   --background-color: #214136;
   --accent-color: #43644950;
