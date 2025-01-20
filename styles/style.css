@@ -323,6 +323,7 @@ p, li {
   width: 200px; /* Set a smaller width for the images */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: Add rounded corners */
+  object-fit: cover;
 }
 .project-media-div{
   display: flex; /* Arrange images side by side */
