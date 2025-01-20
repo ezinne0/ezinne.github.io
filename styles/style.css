@@ -59,6 +59,13 @@ body {
   color: #214136;
 }
 
+.header-link{
+  text-decoration: underline #00bcd4;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+  color: #D44967;
+}
+
 .name {
   font-family: "Jersey 15", serif;
   font-weight: 400;
@@ -284,17 +291,51 @@ p, li {
   margin: 8px 0 4px; /* Reduced spacing */
 }
 
-.award-info {
+.more-info {
   font-size: 1.5em;
   color: #214136;
   font-weight: 550;
   /* margin: 0 0 30px; Reduced bottom margin */
 }
 
-.award-description{
+.more-description{
   font-size: 2.2em;
   color: #214136;
   font-family: "Crimson Text", serif;
   font-weight: 100;
   margin: 0 0 30px;
+}
+
+.project-container {
+  display: flex; /* Align items in a row */
+  flex-direction: row; /* Ensures horizontal alignment */
+  gap: 20px; /* Add space between video and text */
+  text-align: left; /* Ensure text is left-aligned */
+  width: 100%;
+}
+
+.video {
+  width: 600px; /* Set fixed width for video */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.project-media{
+  width: 200px; /* Set a smaller width for the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+.project-media-div{
+  display: flex; /* Arrange images side by side */
+  gap: 15px; /* Add spacing between images */
+}
+
+.project-description {
+  font-size: 2em;
+  color: #214136;
+  font-family: "Crimson Text", serif;
+  font-weight: 100;
+  margin: 0;
+  max-width: 800px; /* Set max width for readability */
+  line-height: 1.6; /* Improve line spacing */
+  width: 50%;
 }

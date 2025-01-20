@@ -18,7 +18,7 @@ class MyHeader extends HTMLElement {
             <li><a href="more.html">more</a></li>
           </ul>
         </nav>
-        <h1 class="name">ezinne okonkwo</h1>
+        <h1 class="name"><a class = "header-link" href="index.html">ezinne okonkwo</a></h1>
       </div>
     `;
 
