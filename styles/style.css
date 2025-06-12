@@ -1,5 +1,5 @@
 /* Author: Ezinne Okonkwo
-Last Updated: 1/12/25
+Last Updated: 5/30/25
 Hello source peeker! */
 
 html {
@@ -8,7 +8,9 @@ html {
 
 /* General styles */
 body {
-  margin: 0;
+  margin: 0 auto;
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
 /* styling for everything up top */
@@ -18,6 +20,17 @@ body {
   gap: 10px;
   justify-content: space-between;
   padding: 0px 40px;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .heading > .navbar {
+    margin-bottom: 10px;
+  }
 }
 
 .intro {
@@ -44,12 +57,12 @@ body {
   font-weight: 400;
 }
 
-.subtitles{
+.subtitles {
   font-size: 4em;
   font-family: "Jersey 15", serif;
   color: #D44967;
   text-align: center;
-  margin:0px;
+  margin: 0px;
 }
 
 .link {
@@ -59,7 +72,7 @@ body {
   color: #214136;
 }
 
-.header-link{
+.header-link {
   text-decoration: underline #00bcd4;
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;
@@ -99,6 +112,17 @@ body {
   padding: 0;
 }
 
+/* On desktop: always flex row */
+@media (min-width: 769px) {
+  .nav-links {
+    flex-direction: row;
+    position: static;
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+}
+
 .nav-links li {
   margin: 0 10px;
 }
@@ -106,9 +130,8 @@ body {
 .nav-links a {
   text-decoration: none;
   font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 1.3em;
   font-weight: 700;
+  font-size: 1.3em;
   color: #D44967;
 }
 
@@ -125,10 +148,6 @@ body {
   text-decoration-style: wavy;
   text-decoration-color: #00bcd4;
   text-decoration-thickness: 2px;
-}
-.nav-links.active {
-  display: flex;
-  top: 100%; /* Ensures the menu appears right below the header */
 }
 
 /* Hamburger menu styles */
@@ -148,40 +167,35 @@ body {
   .menu-toggle {
     display: block;
   }
-  .heading {
-    position: relative;
-  }
 
   .nav-links {
-    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
+    height: 100%;
     background-color: #EEEDE7;
     padding: 20px 0;
-    /* z-index: 1000; */
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
   }
 
   .nav-links.active {
-    display: flex;
+    max-height: 500px; /* large enough for full menu */
+    opacity: 1;
   }
 
   .nav-links li {
     margin: 10px 0;
   }
 
-  .heading {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .navbar {
     width: 100%;
     justify-content: space-between;
     padding: 0 20px;
-    
   }
 
   .name {
@@ -189,8 +203,7 @@ body {
   }
 }
 
-/* dark mode light mode styling (it doesn't work, but I will come back to it own my own time)*/
-/* here is just variable assignment for when I revisit light mode */
+/* dark mode and light mode styling variables */
 :root {
   --body-color: #F9F5F0;
   --text-color: #214136;
@@ -199,20 +212,16 @@ body {
   --specialText-color: #b1b695;
 }
 
-body {
-  margin: 0 auto;
-  background-color: var(--body-color);
-  color: var(--text-color);
+body.dark-mode {
+  --body-color: #214136;
+  --text-color: #F9F5F0;
+  --background-color: #F9F5F0;
+  --accent-color: #b1b695;
+  --specialText-color: #43644950;
 }
 
-.mainImgIndex {
-  max-width: 32%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 40px;
-}
-
+/* Images and general text styles */
+.mainImgIndex,
 .mainImg {
   max-width: 32%;
   display: block;
@@ -220,7 +229,12 @@ body {
   margin-right: auto;
 }
 
-p, li {
+.mainImgIndex {
+  padding-top: 40px;
+}
+
+p,
+li {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -279,7 +293,8 @@ p, li {
 
 .more-container {
   text-align: center;
-  padding-left: 10%; padding-right: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .small-title {
@@ -288,17 +303,16 @@ p, li {
   text-align: center;
   font-family: "Crimson Text", serif;
   font-weight: 580;
-  margin: 8px 0 4px; /* Reduced spacing */
+  margin: 8px 0 4px;
 }
 
 .more-info {
   font-size: 1.5em;
   color: #214136;
   font-weight: 550;
-  /* margin: 0 0 30px; Reduced bottom margin */
 }
 
-.more-description{
+.more-description {
   font-size: 2.2em;
   color: #214136;
   font-family: "Crimson Text", serif;
@@ -307,27 +321,28 @@ p, li {
 }
 
 .project-container {
-  display: flex; /* Align items in a row */
-  flex-direction: row; /* Ensures horizontal alignment */
-  gap: 20px; /* Add space between video and text */
-  text-align: left; /* Ensure text is left-aligned */
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-align: left;
   width: 100%;
 }
 
 .video {
-  width: 600px; /* Set fixed width for video */
-  height: auto; /* Maintain aspect ratio */
+  width: 600px;
+  height: auto;
 }
 
-.project-media{
-  width: 200px; /* Set a smaller width for the images */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: Add rounded corners */
+.project-media {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
   object-fit: cover;
 }
-.project-media-div{
-  display: flex; /* Arrange images side by side */
-  gap: 15px; /* Add spacing between images */
+
+.project-media-div {
+  display: flex;
+  gap: 15px;
 }
 
 .project-description {
@@ -336,7 +351,7 @@ p, li {
   font-family: "Crimson Text", serif;
   font-weight: 100;
   margin: 0;
-  max-width: 800px; /* Set max width for readability */
-  line-height: 1.6; /* Improve line spacing */
+  max-width: 800px;
+  line-height: 1.6;
   width: 50%;
 }
